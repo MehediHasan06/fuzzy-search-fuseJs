@@ -1,0 +1,54 @@
+html,
+body {
+  font-family: Montserrat, sans-serif;
+  background: #ffc005;
+  box-sizing: border-box;
+}
+
+/* input style */
+input:hover,
+ul li:hover {
+  background: #e0e0e0;
+}
+input:active,
+input:focus {
+  outline: none;
+}
+
+/* list style */
+ul {
+  list-style-type: none;
+  width: 80%;
+  margin: auto;
+  margin-top: -2px;
+  padding: 0;
+}
+
+li {
+  overflow:none;
+  background: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 1px 1px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  flex-direction:row;
+  flex-grow:1;
+}
+
+li:nth-child(even) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: linear-gradient(to bottom, #ffffff 0%, #efefef 100%);
+}
+
+li:nth-child(odd) {
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+  background: linear-gradient(to top, #ffffff 0%, #efefef 100%);
+}
+
+.match {
+  background: #ffc005;
+}

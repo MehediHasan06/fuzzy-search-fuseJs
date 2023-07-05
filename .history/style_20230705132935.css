@@ -1,0 +1,33 @@
+html,
+body {
+  font-family: Montserrat, sans-serif;
+  background: #ffc005;
+  box-sizing: border-box;
+}
+
+/* input style */
+input:hover,
+ul li:hover {
+  background: #e0e0e0;
+}
+input:active,
+input:focus {
+  outline: none;
+}
+
+/* list style */
+
+li {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 1px 1px;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  flex-direction:row;
+  flex-grow:1;
+}
+

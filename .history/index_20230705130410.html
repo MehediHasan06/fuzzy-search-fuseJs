@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuse Fuzzy Search</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fuse,Alpine & Tailwind CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div class="w-1/2 m-auto p-5">
+
+    <input type="text" class="search w-full p-5 text-xl text-center border-0 rounded-md transition-all duration-300 box-border" placeholder="Search your query">
+
+    <ul class=""></ul>
+
+    <textarea class="result border-0 w-full mt-10 rounded-md" cols="30" rows="10" x-model="JSON.stringify(results, null, 3)"></textarea>
+
+  </div>
+
+
+  <script src="./index.js"></script>
+</body>
+</html>

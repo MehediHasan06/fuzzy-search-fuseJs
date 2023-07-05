@@ -1,0 +1,16 @@
+html,
+body {
+  font-family: Montserrat, sans-serif;
+  background: #ffc005;
+  box-sizing: border-box;
+}
+
+/* input style */
+input:hover,
+ul li:hover {
+  background: #e0e0e0;
+}
+input:active,
+input:focus {
+  outline: none;
+}
