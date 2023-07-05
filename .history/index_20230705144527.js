@@ -34,13 +34,14 @@ function searchFunc(value) {
   console.log(resultArr);
 
   if(resultArr.length > 0){
-    suggestionsArea.innerHTML = "";
+    // suggestionsArea.innerHTML = "";
     resultArr.forEach(element => {
       console.log(element.item.title);
 
       const listTitle = document.createElement("li");
       listTitle.innerText = element.item.title;
-      suggestionsArea.appendChild(listTitle);
+      // suggestionsArea.appendChild(listTitle);
+      suggestionsArea.innerHTML = listTitle;
     });
   } else {
     suggestionsArea.innerHTML = "";
