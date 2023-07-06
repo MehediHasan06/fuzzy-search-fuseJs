@@ -28,13 +28,14 @@ let searchBar = document.querySelector(".search");
 // let resultArea = document.querySelector(".result");  
 let suggestionsArea = document.querySelector("ul");
 
-// search and match functionality
+// search functionality
 function findMatches(wordToMatch){
   return bookStoreFaq.filter(faq => {
     var regex = new RegExp(wordToMatch, 'gi');
     return faq.question.match(regex);
   });
 };
+
 
 function searchFunc(value) {
   let resultArr = fuse.search(value);
@@ -45,18 +46,33 @@ function searchFunc(value) {
 
   const html = matches.map((match) => {
     const regex = new RegExp(value, 'gi');
-    
-    const questionValue = !(value === "") ? 
-      match.question.replace(regex, `<span class="match">${value}</span>`) : ``;
-    return !(questionValue === "") ? `<li>${questionValue}</li>` : ``;
+    console.log("regex", regex);
+    const question = match.question.replace(regex, `<span class="match">${value}</span>`);
 
+    return `
+      <li>
+        <span>${question}</span>
+      </li>
+    `;
   }).join(' ');
   suggestionsArea.innerHTML = html;
+
+  // if(resultArr.length > 0){
+  //   suggestionsArea.innerHTML = "";
+  //   resultArr.forEach(element => {
+  //     console.log(element.item.question);
+
+  //     const listTitle = document.createElement("li");
+  //     listTitle.innerText = element.item.question;
+  //     suggestionsArea.appendChild(listTitle);
+  //   });
+  // } else {
+  //   suggestionsArea.innerHTML = "";
+  // }
   
 
   // resultArea.value = JSON.stringify(resultArr, null, 3);
 };
-
 // fuse initialization and options
 let options = {
   includeScore: true,

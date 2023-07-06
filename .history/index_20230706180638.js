@@ -28,13 +28,14 @@ let searchBar = document.querySelector(".search");
 // let resultArea = document.querySelector(".result");  
 let suggestionsArea = document.querySelector("ul");
 
-// search and match functionality
+// search functionality
 function findMatches(wordToMatch){
   return bookStoreFaq.filter(faq => {
     var regex = new RegExp(wordToMatch, 'gi');
     return faq.question.match(regex);
   });
 };
+
 
 function searchFunc(value) {
   let resultArr = fuse.search(value);
@@ -56,7 +57,6 @@ function searchFunc(value) {
 
   // resultArea.value = JSON.stringify(resultArr, null, 3);
 };
-
 // fuse initialization and options
 let options = {
   includeScore: true,

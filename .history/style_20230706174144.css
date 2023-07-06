@@ -26,16 +26,14 @@ li {
   padding: 20px;
   margin: 1px 1px;
   text-transform: capitalize;
-  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  flex-direction:row;
+  flex-grow:1;
 }
 .match {
   background: #ffc005;
-  border: 1px solid #bdc3c7;
-  font-weight: bold;
-  padding: 1px 3px;
-  margin: 2px;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-  font-size: 1.1rem;
 }
 
