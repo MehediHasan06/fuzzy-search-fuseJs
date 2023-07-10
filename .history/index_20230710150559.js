@@ -26,8 +26,7 @@ const bookStoreFaq = [
 // dom elements
 let searchBar = document.querySelector(".search");
 // let resultArea = document.querySelector(".result");  
-let suggestionsArea = document.querySelector("ul");
-let accordionContainer = document.querySelector(".accordion-container .tabs");
+let suggestionsArea = document.querySelector("ulh
 
 function searchFunc(value) {
   let resultArr = fuse.search(value);
@@ -69,16 +68,5 @@ searchBar.addEventListener("input", (e) => {
 
 // accordion with testing data
 function createAccordion() {
-  const html = bookStoreFaq.map((item,index) => {
-    console.log(index);
-    return `
-      <div class="tab">
-        <input type="radio" id="rd${index+1}" name="rd">
-        <label class="tab-label" for="rd${index+1}">${item.question}</label>
-        <div class="tab-content">${item.answer}</div>
-      </div>
-    `
-  }).join(' ');
-  accordionContainer.innerHTML = html;
-};
-createAccordion();
+
+}

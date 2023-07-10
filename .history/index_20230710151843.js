@@ -69,12 +69,11 @@ searchBar.addEventListener("input", (e) => {
 
 // accordion with testing data
 function createAccordion() {
-  const html = bookStoreFaq.map((item,index) => {
-    console.log(index);
+  const html = bookStoreFaq.map((item) => {
     return `
       <div class="tab">
-        <input type="radio" id="rd${index+1}" name="rd">
-        <label class="tab-label" for="rd${index+1}">${item.question}</label>
+        <input type="radio" id="rd1" name="rd">
+        <label class="tab-label" for="rd1">${item.question}</label>
         <div class="tab-content">${item.answer}</div>
       </div>
     `
