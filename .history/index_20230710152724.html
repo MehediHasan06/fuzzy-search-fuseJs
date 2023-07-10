@@ -12,7 +12,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <div class="w-1/2 m-auto p-5 relative">
+  <div class="w-1/2 m-auto p-5">
     <form class="relative">
       <input type="text" class="search w-full p-5 text-xl text-center border-0 rounded-md transition-all duration-300 box-border " placeholder="Search your query">
       <!-- search icon -->
@@ -21,15 +21,16 @@
         </svg>
       </div>
     </form>
-    <ul class="w-[95%] mt-4 list-none absolute"></ul>
+    <ul class="w-full mt-4 list-none"></ul>
 
     <!-- <textarea class="result border-0 w-full mt-10 rounded-md" cols="30" rows="10" x-model="JSON.stringify(results, null, 3)"></textarea> -->
   </div>
 
   <!-- accordion -->
-  <div class="mt-80 accordion-container w-1/2 m-auto">
-    <h2 class="text-center text-2xl mb-5">Bookstore Question/Answer</h2>
-    <div class="tabs"></div>
+  <div class="mt-40 accordion-container">
+    <h2 class="text-center text-2xl mb-10">Bookstore Question/Answer</h2>
+    <div class="tabs">
+    </div>
   </div>
 
   <script src="./index.js"></script>

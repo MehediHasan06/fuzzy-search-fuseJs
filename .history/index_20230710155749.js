@@ -90,7 +90,6 @@ createAccordion();
 // accordion functionality on suggestions click
 function handleSuggestionClick(value) {
   console.log("suggestion clicked!  !", value+1);
-  let clickedSuggestion = document.querySelector(`input#rd${value+1}`);
-  console.log(clickedSuggestion);
+  let clickedSuggestion = document.querySelector("input#rd"+value+1);
   clickedSuggestion.checked = true;
 };

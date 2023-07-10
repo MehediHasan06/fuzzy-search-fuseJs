@@ -38,12 +38,8 @@ function searchFunc(value) {
     console.log(match);
     
     const questionValue = !(value === "") ? 
-      match.item.question.replace(regex, `<span class="match">${value}</span>`) 
-      : ``;
-
-    return !(questionValue === "") ? 
-      `<li class="cursor-pointer" onclick="handleSuggestionClick(${match.refIndex})">${questionValue}</li>` 
-      : ``;
+      match.item.question.replace(regex, `<span class="match">${value}</span>`) : ``;
+    return !(questionValue === "") ? `<li class="cursor-pointer">${questionValue}</li>` : ``;
 
   }).join(' ');
   suggestionsArea.innerHTML = html;
@@ -86,11 +82,3 @@ function createAccordion() {
   accordionContainer.innerHTML = html;
 };
 createAccordion();
-
-// accordion functionality on suggestions click
-function handleSuggestionClick(value) {
-  console.log("suggestion clicked!  !", value+1);
-  let clickedSuggestion = document.querySelector(`input#rd${value+1}`);
-  console.log(clickedSuggestion);
-  clickedSuggestion.checked = true;
-};
