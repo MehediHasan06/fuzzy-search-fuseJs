@@ -28,16 +28,26 @@ let searchBar = document.querySelector(".search");
 // let resultArea = document.querySelector(".result");  
 let suggestionsArea = document.querySelector("ul");
 
+// search and match functionality
+// function findMatches(wordToMatch){
+//   return bookStoreFaq.filter(faq => {
+//     var regex = new RegExp(wordToMatch, 'gi');
+//     return faq.question.match(regex);
+//   });
+// };
+
 function searchFunc(value) {
   let resultArr = fuse.search(value);
+  // const matches = findMatches(value);
+
+  // console.log(matches);
   console.log(value);
 
   const html = resultArr.map((match) => {
     const regex = new RegExp(value, 'gi');
-    console.log(match);
     
     const questionValue = !(value === "") ? 
-      match.item.question.replace(regex, `<span class="match">${value}</span>`) : ``;
+      match.question.replace(regex, `<span class="match">${value}</span>`) : ``;
     return !(questionValue === "") ? `<li>${questionValue}</li>` : ``;
 
   }).join(' ');

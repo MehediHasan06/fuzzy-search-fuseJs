@@ -28,8 +28,19 @@ let searchBar = document.querySelector(".search");
 // let resultArea = document.querySelector(".result");  
 let suggestionsArea = document.querySelector("ul");
 
+// search and match functionality
+// function findMatches(wordToMatch){
+//   return bookStoreFaq.filter(faq => {
+//     var regex = new RegExp(wordToMatch, 'gi');
+//     return faq.question.match(regex);
+//   });
+// };
+
 function searchFunc(value) {
   let resultArr = fuse.search(value);
+  // const matches = findMatches(value);
+
+  // console.log(matches);
   console.log(value);
 
   const html = resultArr.map((match) => {
